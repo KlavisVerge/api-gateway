@@ -2,3 +2,4 @@
 node_modules/
 tf_backend/
 terraform.tfvars
+.terraform
