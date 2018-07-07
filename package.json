@@ -1,0 +1,34 @@
+{
+    "name": "api-gateway",
+    "private": false,
+    "version": "1.0.0",
+    "main": "app/index.js",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint . --ext js --ignore-path .gitignore",
+        "test": "nyc ava",
+        "tdd": "ava --watch"
+    },
+    "dependencies": {
+        "dotenv": "^4.0.0"
+    },
+    "devDependencies": {
+        "aws-sdk": "^2.143.0",
+        "eslint": "^4.10.0",
+        "eslint-config-google": "^0.9.1",
+        "husky": "^0.14.3",
+        "nyc": "^11.3.0"
+    },
+    "nyc": {
+        "include": [
+            "src/**.*.js"
+        ],
+        "reporter": [
+            "lcov",
+            "text"
+        ],
+        "all": true
+    },
+    "repository": "https://github.com/KlavisVerge/api-gateway.git",
+    "author": "Nick Phillips <imprecatorr@gmail.com>"
+}
